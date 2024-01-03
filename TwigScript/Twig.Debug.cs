@@ -17,7 +17,7 @@ public partial class Twig
         {
             return;
         }
-        if (!script.StartsWith('@'))
+        if (_dict.ContainsKey(script))
         {
             script = Get(script);
         }
@@ -31,10 +31,10 @@ public partial class Twig
 
     public void DebugNext(StringBuilder result)
     {
-        if (DebugDone()) 
-        { 
-            result.AppendLine("Debug done."); 
-            return; 
+        if (DebugDone())
+        {
+            result.AppendLine("Debug done.");
+            return;
         }
         StringBuilder tempResult = new();
         var saveIndex = _debugIndex;

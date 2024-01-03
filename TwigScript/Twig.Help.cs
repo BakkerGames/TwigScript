@@ -36,13 +36,13 @@ public partial class Twig
         result.AppendLine($"   {ADD}x,y)");
         result.AppendLine($"   {CONCAT}x,y,...)");
         result.AppendLine($"   {DIV}x,y)");
+        result.AppendLine($"   {FORMAT}x,y0,y1,...)");
         result.AppendLine($"   {GET}key)");
         result.AppendLine($"   {GETVALUE}key)");
         result.AppendLine($"   {LOWER}x)");
         result.AppendLine($"   {MOD}x,y)");
         result.AppendLine($"   {MUL}x,y)");
         result.AppendLine($"   {REPLACE}x,y,z)");
-        result.AppendLine($"   {REPLACEF}x,y0,y1,...)");
         result.AppendLine($"   {RND}x)");
         result.AppendLine($"   {SUB}x,y)");
         result.AppendLine($"   {TRIM}x)");
@@ -105,6 +105,7 @@ public partial class Twig
         result.AppendLine("Subchannel commands:");
         result.AppendLine($"   {ANSWER}script)");
         result.AppendLine($"   {QUIT}");
+        result.AppendLine($"   {RESTART}");
         result.AppendLine($"   {RESTORE}");
         result.AppendLine($"   {SAVE}");
         result.AppendLine($"   {YORN}yes_script,no_script,error_script)");

@@ -39,6 +39,9 @@ public partial class Twig
                     case QUIT:
                         Subchannel += SUBCHANNEL_GAMEOVER;
                         return;
+                    case RESTART:
+                        Subchannel += SUBCHANNEL_RESTART;
+                        return;
                     case RESTORE:
                         Subchannel += SUBCHANNEL_RESTORE;
                         return;
@@ -194,6 +197,15 @@ public partial class Twig
                     // begins a @foreach block
                     CheckParamCountAtLeast(token, p, 2);
                     HandleForEach(p, tokens, ref index, result);
+                    return;
+                case FORMAT:
+                    // in p[0], replace "{0}"..."{n}" with p[1]...p[n+1]
+                    temp1 = p[0];
+                    for (int i = 1; i < p.Count; i++)
+                    {
+                        temp1 = temp1.Replace($"{{{i - 1}}}", p[i]); // {0} = p[1]
+                    }
+                    result.Append(temp1);
                     return;
                 case GE:
                     // is first value greater or equal to second
@@ -468,15 +480,6 @@ public partial class Twig
                     // in value0, replace value1 with value2
                     CheckParamCount(token, p, 3);
                     result.Append(p[0].Replace(p[1], p[2], OIC));
-                    return;
-                case REPLACEF:
-                    // in p[0], replace "{0}"..."{n}" with p[1]...p[n+1]
-                    temp1 = p[0];
-                    for (int i = 1; i < p.Count; i++)
-                    {
-                        temp1 = temp1.Replace($"{{{i - 1}}}", p[i]); // {0} = p[1]
-                    }
-                    result.Append(temp1);
                     return;
                 case RND:
                     // return random number less than value
