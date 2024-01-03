@@ -83,6 +83,7 @@ public static class Constants
     public const string RESTART = "@restart";
     public const string RESTORE = "@restore";
     public const string SAVE = "@save";
+    public const string UNDO = "@undo";
     public const string YORN = "@yorn(";
 
     public const string SUBCHANNEL_ANSWER = "#ANSWER;";
@@ -90,6 +91,7 @@ public static class Constants
     public const string SUBCHANNEL_RESTART = "#RESTART;";
     public const string SUBCHANNEL_RESTORE = "#RESTORE;";
     public const string SUBCHANNEL_SAVE = "#SAVE;";
+    public const string SUBCHANNEL_UNDO = "#UNDO;";
     public const string SUBCHANNEL_YORN = "#YORN;";
 
     public const string ARRAY_PREFIX = "array.";

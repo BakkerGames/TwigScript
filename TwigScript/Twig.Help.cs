@@ -108,6 +108,7 @@ public partial class Twig
         result.AppendLine($"   {RESTART}");
         result.AppendLine($"   {RESTORE}");
         result.AppendLine($"   {SAVE}");
+        result.AppendLine($"   {UNDO}");
         result.AppendLine($"   {YORN}yes_script,no_script,error_script)");
 
         return result.ToString();

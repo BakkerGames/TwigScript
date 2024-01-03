@@ -48,6 +48,9 @@ public partial class Twig
                     case SAVE:
                         Subchannel += SUBCHANNEL_SAVE;
                         return;
+                    case UNDO:
+                        Subchannel += SUBCHANNEL_UNDO;
+                        return;
                     default:
                         // run a defined function with no parameters
                         // @func=...

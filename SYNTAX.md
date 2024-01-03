@@ -361,6 +361,10 @@ Note that the array values are referenced by row (y) first and then column (x), 
 
 >Sends a "#SAVE;" message on the subchannel. The calling program is responsible for handling the details of saving data.
 
+@undo
+
+>Sends an "#UNDO;" message on the subchannel. The calling program is responsible for handling the details of undoing the last move.
+
 @yorn(yes_script,no_script,error_script)
 
 >Sends a "#YORN;" message (aka "Yes OR No") on the subchannel, indicating it would like a yes or no answer from the calling program. All three scripts are keys to saved scripts in the dictionary. If the answer can be identified as truthy, the "yes_script" is executed. If it can be identified as falsey, the "no_script" is executed. Otherwise "error_script" will be executed. The calling program is expected to call "HandleYorn(input, result)" with the answer.
