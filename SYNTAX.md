@@ -109,6 +109,10 @@ There is also a "Subchannel" property which is used for communication between Tw
 
 >Returns the integer answer from dividing "value1" by "value2".
 
+@format(value,v0,v1...)
+
+>Replaces tokens "{0}", "{1}"... in value with v0, v1... and returns the result.
+
 @get(key)
 
 >Returns the raw value for "key" from the dictionary.
@@ -132,10 +136,6 @@ There is also a "Subchannel" property which is used for communication between Tw
 @replace(value,old,new)
 
 >Returns "value" with all occurances of "old" changed to "new".
-
-@replacef(value,v0,v1...)
-
->Replaces tokens "{0}", "{1}"... in value with v0, v1... and returns the result.
 
 @rnd(value)
 
@@ -348,6 +348,10 @@ Note that the array values are referenced by row (y) first and then column (x), 
 @quit
 
 >Sends a "#GAMEOVER;" message on the subchannel. All processing should stop after this.
+
+@restart
+
+>Sends a "#RESTART;" message on the subchannel. The calling program is responsible for handling the details of restarting the game. Note that using GROD for the data dictionary makes this simple!
 
 @restore
 

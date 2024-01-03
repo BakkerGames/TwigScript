@@ -26,13 +26,13 @@ public static class Constants
     public const string ADD = "@add(";
     public const string CONCAT = "@concat(";
     public const string DIV = "@div(";
+    public const string FORMAT = "@format(";
     public const string GET = "@get(";
     public const string GETVALUE = "@getvalue(";
     public const string LOWER = "@lower(";
     public const string MOD = "@mod(";
     public const string MUL = "@mul(";
     public const string REPLACE = "@replace(";
-    public const string REPLACEF = "@replacef(";
     public const string RND = "@rnd(";
     public const string SUB = "@sub(";
     public const string TRIM = "@trim(";
@@ -80,12 +80,14 @@ public static class Constants
 
     public const string ANSWER = "@answer(";
     public const string QUIT = "@quit";
+    public const string RESTART = "@restart";
     public const string RESTORE = "@restore";
     public const string SAVE = "@save";
     public const string YORN = "@yorn(";
 
     public const string SUBCHANNEL_ANSWER = "#ANSWER;";
     public const string SUBCHANNEL_GAMEOVER = "#GAMEOVER;";
+    public const string SUBCHANNEL_RESTART = "#RESTART;";
     public const string SUBCHANNEL_RESTORE = "#RESTORE;";
     public const string SUBCHANNEL_SAVE = "#SAVE;";
     public const string SUBCHANNEL_YORN = "#YORN;";
